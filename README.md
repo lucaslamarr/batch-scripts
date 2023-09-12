@@ -3,7 +3,6 @@ A collection of small Python and Batch file tools that I have created and added 
 
 The example folders consist of the following...
 
-- build
 - misc
 - source
 
