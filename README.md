@@ -1,14 +1,5 @@
-# batch-tools
-A collection of Batch file tools that I have created and added to my workflow.
-
-The example folders consist of the following...
-
-- misc
-- source
-
-You will find all of the scripts included in the misc folder and they already have their paths set to the build and source folders. You are free to go in and adjust the structure of the directories however you want, just remember to adjust the path variables that are towards the top of the Batch files that you are using.
-
-Inside of the misc folder you will find the following files...
+# batch-scripts
+A collection of Batch file scripts that I have created and added to my workflow.
 
 1. Build - Builds any C files that exist within the source folder using GCC. This can be easily modified to accept other file types and also link libraries. If you do not already have a build folder next to the source folder, running this file will create one.
 2. Run - Searches the previously created build folder for an executable by the name specified in this file and runs it. If a build folder does not exist, this program will not run unless you change the search path for finding the executable elsewhere.
