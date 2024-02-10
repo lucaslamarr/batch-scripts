@@ -1,4 +1,4 @@
-+A collection of Batch file scripts that I have created and added to my workflow.
+A collection of Batch file scripts that I have created and added to my workflow.
 
 1. build.bat - Builds any C files that exist within the source folder using GCC. This can be easily modified to accept other file types and also link libraries. If you do not already have a build folder next to the source folder, running this file will create one.
 2. run.bat - Searches the previously created build folder for an executable by the name specified in this file and runs it. If a build folder does not exist, this program will not run unless you change the search path for finding the executable elsewhere.
