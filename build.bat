@@ -1,18 +1,23 @@
 @echo off
+setlocal EnableDelayedExpansion
 
-set source_path=..\source\
-set build_path=..\build\
+if not exist "build" (
+    mkdir "build"
+)
 
-set file_to_run=*
-set file_type_extension=.c
-set full_file_name=%file_to_run%%file_type_extension%
+set SRC_FILES=
+for %%f in (source\*.c) do (
+    set SRC_FILES=!SRC_FILES! %%f
+)
 
-set application_name=program
-set extension_type=.exe
+gcc -o "build\program.exe" !SRC_FILES! -lkernel32 -luser32 -lgdi32
 
-if not exist %build_path% mkdir %build_path%
-pushd %build_path%
-gcc %source_path%%full_file_name% -o %application_name%%extension_type%
-popd
+if %errorlevel% neq 0 (
+    echo Build failed with error code %errorlevel%
+) else (
+    echo Build succeeded
+    build\program.exe
+)
 
-
+pause
+endlocal
