@@ -1,8 +1,7 @@
 @echo off
 Setlocal EnableDelayedExpansion
 
-set workspace_folder=%CD%
-set source_path=%workspace_folder%\source
+set source_path=%cd%\source
 
 set c_number=0
 set h_number=0
@@ -11,7 +10,7 @@ set c_file_count=0
 set h_file_count=0
 set total_file_count=0
 
-echo Calculating .c files...
+echo Reading Source Files...
 echo.
 
 for /r %source_path% %%f in (*.c) do (
@@ -30,7 +29,7 @@ echo .c Line Count: %c_number%
 echo ---------------------------------------------------
 echo.
 
-echo Calculating .h files...
+echo Reading Header Files...
 echo.
 
 for /r %source_path% %%f in (*.h) do (
